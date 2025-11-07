@@ -1,0 +1,23 @@
+MODULE AddinSystem
+    PERS bool gAddinReady:=FALSE;
+    PERS string gActiveStation:="DemoStation";
+
+    PROC AddinPowerOn()
+        gAddinReady:=FALSE;
+        AddinInit;
+        gAddinReady:=TRUE;
+    ENDPROC
+
+    PROC AddinInit()
+        TPWrite "YOUR_ADDIN_NAME: binding task "+gActiveStation;
+        ! Allocate shared data, connect services, etc.
+    ENDPROC
+
+    PROC AddinServiceTick()
+        IF diAddinStart=1 THEN
+            SetDO doAddinReady,1;
+        ELSE
+            SetDO doAddinReady,0;
+        ENDIF
+    ENDPROC
+ENDMODULE

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-cfg-rules" cfgName="PROC" resourceID="addin_txt_domain" cfgRulesVersion="1.3">
+  <Type cfgName="ADDIN_SETTINGS" resourceID="addin_txt_type" addRemoveInstances="true" instanceVisibility="showAll">
+    <Parameter cfgName="task" resourceID="addin_txt_task" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm">
+      <LookupParameterValue domainCfgName="SYS" typeCfgName="CAB_TASKS" parameterCfgName="Name" userEdit="false" />
+    </Parameter>
+    <Parameter cfgName="station_label" resourceID="addin_txt_station" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" />
+    <Parameter cfgName="start_di" resourceID="addin_txt_request" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm">
+      <LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="true">
+        <ParamValueFilterGroup condition="valAnd">
+          <ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+        </ParamValueFilterGroup>
+      </LookupParameterValue>
+    </Parameter>
+    <Parameter cfgName="ready_do" resourceID="addin_txt_ready" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm">
+      <LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="true">
+        <ParamValueFilterGroup condition="valAnd">
+          <ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+        </ParamValueFilterGroup>
+      </LookupParameterValue>
+    </Parameter>
+    <Parameter cfgName="home_routine" resourceID="addin_txt_home" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" />
+    <Parameter cfgName="description" resourceID="addin_txt_desc" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" />
+    <Parameter cfgName="use_eio" resourceID="addin_txt_useio" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" initVal="1">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="addin_txt_true">1</CfgValue>
+        <CfgValue resourceID="addin_txt_false">0</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+</Domain>

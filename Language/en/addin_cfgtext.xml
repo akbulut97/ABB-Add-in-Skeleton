@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resources xmlns="urn:abb-robotics-cfg-text" language="en-us" cfgTextVersion="1.0">
+  <Text resourceID="addin_txt_domain">YOUR_ADDIN_NAME Process Settings</Text>
+  <Text resourceID="addin_txt_type">Demo station binding</Text>
+  <Text resourceID="addin_txt_task">Task name</Text>
+  <Text resourceID="addin_txt_station">Station label</Text>
+  <Text resourceID="addin_txt_request">Start handshake DI</Text>
+  <Text resourceID="addin_txt_ready">Ready DO</Text>
+  <Text resourceID="addin_txt_home">Home routine</Text>
+  <Text resourceID="addin_txt_desc">Free text description</Text>
+  <Text resourceID="addin_txt_useio">Use EIO handshake</Text>
+  <Text resourceID="addin_txt_true">Enabled</Text>
+  <Text resourceID="addin_txt_false">Disabled</Text>
+</Resources>

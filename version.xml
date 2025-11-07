@@ -1,0 +1,11 @@
+<Version>
+  <Major>0</Major>
+  <Minor>1</Minor>
+  <Build>0</Build>
+  <Revision>0</Revision>
+  <VersionName>0.1.0</VersionName>
+  <Title>YOUR_ADDIN_NAME</Title>
+  <Description>Template description for a RobotWare Additional Option.</Description>
+  <Date>2025-01-01</Date>
+  <Type>AdditionalOption</Type>
+</Version>
